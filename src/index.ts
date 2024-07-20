@@ -1,7 +1,6 @@
-import {Address, JettonMaster, TonClient, WalletContractV4} from "@ton/ton";
+import {Address, JettonMaster, TonClient, WalletContractV4, JettonWallet} from "@ton/ton";
 import {genKey, getBalance, getTonAddress, getTonClient, getWalletFromMnemonic} from "./base-utils";
 import TonWeb from "tonweb";
-
 
 const WORKCHAIN = 0;
 const CLIENT = new TonClient({
@@ -23,18 +22,23 @@ async function main() {
     const balance12 = await getBalance(contract12);
     console.log('[1.2] balance:', balance12);
 
-    // 1.3. Get Jettons balance
+    // 1.3. Get Jettons balance (TonWeb)
     const usdtMasterAddress = Address.parse('EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs');
-    const jettonMaster = tonClient.open(JettonMaster.create(usdtMasterAddress));
+    const usdtMasterContract = tonClient.open(JettonMaster.create(usdtMasterAddress));
     const address13 = await getTonAddress('EQAYqo4u7VF0fa4DPAebk4g9lBytj2VFny7pzXR0trjtXQaO');
-    const jettonAddress = await jettonMaster.getWalletAddress(address13);
-    console.log('[1.3] address - jetton address: ', address13, '-', jettonAddress);
-    console.log('[1.3] [i] check 2 type address', address13.toRawString(), jettonAddress.toRawString()); // return the same address
+    const jettonAddress = await usdtMasterContract.getWalletAddress(address13);
+    console.log('[1.3] [skip] address - jetton address: ', address13, '-', jettonAddress);
+    console.log('[1.3] [skip] check same address', address13.toRawString() === Address.parse(address13.toRawString()).toRawString()); // return the same address
 
     const tonweb = new TonWeb();
     const jettonWallet = new TonWeb.token.jetton.JettonWallet(tonweb.provider,{address: jettonAddress.toRawString()});
     const data = await jettonWallet.getData();
-    console.log('[1.3] balance:', data.balance);
+    console.log('[1.3] balance:', data.balance.toString());
+
+    // 1.4. Get Jettons balance (Ton)
+    const jettonWalletContract = tonClient.open(JettonWallet.create(jettonAddress));
+    const balance14 = await jettonWalletContract.getBalance();
+    console.log('[1.4] balance:', balance14);
 
     // 2.1. Create transaction
     const mnemonic = 'detect deliver invest lamp above genre either life ski sign eight subject mercy crowd cabbage bomb sniff lens tide rookie chase bid tent hello'
