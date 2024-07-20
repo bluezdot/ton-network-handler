@@ -11,6 +11,7 @@
     "@ton/crypto": "^3.2.0",
     "@ton/ton": "^14.0.0",
     "buffer": "^6.0.3",
+    "tonweb": "^0.0.66",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   }
