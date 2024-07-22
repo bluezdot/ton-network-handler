@@ -6,7 +6,7 @@ async function main () {
     const client = await getTonClient(true);
     const wallet = await getWalletFromMnemonic(MNEMONIC);
 
-    console.log('wallet', wallet.address, wallet.publicKey, wallet.walletId, wallet.workchain);
+    console.log('wallet', wallet.address.toString({testOnly: false, bounceable: true}), wallet.publicKey, wallet.walletId, wallet.workchain);
 
     return 0;
 }
