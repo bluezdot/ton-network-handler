@@ -4,9 +4,82 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aa6e5e7-77ea-45c9-9de8-36bca5acefb4" name="Changes" comment="feat: retrive balance jettons through @ton/ton lib">
+    <list default="true" id="7aa6e5e7-77ea-45c9-9de8-36bca5acefb4" name="Changes" comment="test: add test client and transactions object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/bn.js/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/lib/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/bn.js/lib/bn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/bn.js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/test/arithmetic-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/test/binary-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/test/constructor-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/test/fixtures.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/test/pummel/dh-group-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/test/red-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/test/utils-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/util/genCombMulTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bn.js/util/genCombMulTo10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/copy-sync/copy-sync.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/copy-sync/copy-sync.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/copy/copy.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/copy/copy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/empty/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/empty/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/ensure/file.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/ensure/file.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/ensure/symlink-paths.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/ensure/symlink-paths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/ensure/symlink-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/ensure/symlink-type.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/fs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/fs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/json/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/json/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/json/jsonfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/json/jsonfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/json/output-json-sync.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/json/output-json-sync.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/json/output-json.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/json/output-json.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/mkdirs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/mkdirs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/mkdirs/make-dir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/remove/rimraf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/remove/rimraf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/util/stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/util/stat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/lib/util/utimes.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/lib/util/utimes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fs-extra/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fs-extra/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-fetch/node_modules/node-fetch/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-fetch/node_modules/node-fetch/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-fetch/node_modules/node-fetch/browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-fetch/node_modules/node-fetch/lib/index.es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-fetch/node_modules/node-fetch/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-fetch/node_modules/node-fetch/lib/index.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isomorphic-fetch/node_modules/node-fetch/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jsonfile/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jsonfile/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jsonfile/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jsonfile/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jsonfile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jsonfile/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jsonfile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jsonfile/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jsonfile/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-fetch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-fetch/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-fetch/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-fetch/browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-fetch/lib/index.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-fetch/lib/index.es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-fetch/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-fetch/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-fetch/lib/index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-fetch/lib/index.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-fetch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-fetch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/lib/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/lib/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/lib/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/lib/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/lib/picomatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/lib/picomatch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/picomatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/picomatch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tonweb/node_modules/bn.js/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tonweb/node_modules/bn.js/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tonweb/node_modules/bn.js/lib/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tonweb/node_modules/bn.js/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/universalify/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/universalify/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/universalify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/universalify/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/universalify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/universalify/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/base-utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_address.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_wallet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_wallet.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +125,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/const.ts" />
       <recent name="$PROJECT_DIR$/src/utils.ts" />
     </key>
   </component>
@@ -74,7 +148,8 @@
       <workItem from="1721441735197" duration="1338000" />
       <workItem from="1721443085722" duration="3074000" />
       <workItem from="1721447122092" duration="6107000" />
-      <workItem from="1721459454455" duration="10485000" />
+      <workItem from="1721459454455" duration="12509000" />
+      <workItem from="1721613387971" duration="15241000" />
     </task>
     <task id="LOCAL-00001" summary="feat: retrive balance jettons">
       <option name="closed" value="true" />
@@ -92,7 +167,47 @@
       <option name="project" value="LOCAL" />
       <updated>1721465242539</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: retrive balance jettons through @ton/ton lib">
+      <option name="closed" value="true" />
+      <created>1721476148527</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721476148527</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test: add log for test feature on some objects">
+      <option name="closed" value="true" />
+      <created>1721617571730</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721617571730</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test: add log for test feature on some objects">
+      <option name="closed" value="true" />
+      <created>1721618043822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721618043822</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test: add test balance for 2 testing accounts">
+      <option name="closed" value="true" />
+      <created>1721618918907</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721618918907</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test: add test client and transactions object">
+      <option name="closed" value="true" />
+      <created>1721622353616</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721622353616</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +228,9 @@
     <MESSAGE value="retrive balance jettons" />
     <MESSAGE value="feat: retrive balance jettons" />
     <MESSAGE value="feat: retrive balance jettons through @ton/ton lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: retrive balance jettons through @ton/ton lib" />
+    <MESSAGE value="test: add log for test feature on some objects" />
+    <MESSAGE value="test: add test balance for 2 testing accounts" />
+    <MESSAGE value="test: add test client and transactions object" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: add test client and transactions object" />
   </component>
 </project>

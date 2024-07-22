@@ -1,8 +1,8 @@
-import {Address, JettonMaster, TonClient, WalletContractV4, JettonWallet} from "@ton/ton";
+import {Address, JettonMaster, JettonWallet, TonClient, WalletContractV4} from "@ton/ton";
 import {genKey, getBalance, getTonAddress, getTonClient, getWalletFromMnemonic} from "./base-utils";
 import TonWeb from "tonweb";
+import {WORKCHAIN} from "./const";
 
-const WORKCHAIN = 0;
 const CLIENT = new TonClient({
     endpoint: 'https://toncenter.com/api/v2/jsonRPC'
 });
@@ -40,13 +40,8 @@ async function main() {
     const balance14 = await jettonWalletContract.getBalance();
     console.log('[1.4] balance:', balance14);
 
-    // 2.1. Create transaction
-    const mnemonic = 'detect deliver invest lamp above genre either life ski sign eight subject mercy crowd cabbage bomb sniff lens tide rookie chase bid tent hello'
-    const wallet21 = await getWalletFromMnemonic(mnemonic);
-    const contract21 = tonClient.open(wallet21);
-    // console.log('[2.1] balance', await getBalance(contract21));
-
     return 'end';
 }
 
 main().then(r => (console.log(r.toString())) );
+export {MNEMONIC} from "./const";

@@ -2,12 +2,25 @@ import {getHttpEndpoint} from "@orbs-network/ton-access";
 import {Address, internal, OpenedContract, TonClient, WalletContractV4} from "@ton/ton";
 import {KeyPair, mnemonicNew, mnemonicToPrivateKey, mnemonicToWalletKey} from "@ton/crypto";
 
-export async function genKey() {
+export async function genKey(mnemonic?: string) {
+    if (mnemonic) {
+        return await mnemonicToPrivateKey(stringToStringArray(mnemonic));
+    }
+
     const mnemonics = await mnemonicNew();
     return await mnemonicToPrivateKey(mnemonics);
 }
 
-export async function getTonClient () {
+export function stringToStringArray (str: string) {
+    return str.split(' ').map(word => word.trim());
+}
+
+export async function getTonClient (isTestnet = false) {
+    if (isTestnet) {
+        const endpoint = await getHttpEndpoint({network: 'testnet'});
+        return new TonClient({ endpoint })
+    }
+
     const endpoint = await getHttpEndpoint();
     return new TonClient({ endpoint });
 }
@@ -20,11 +33,11 @@ export function convertToRawAddress (userFriendlyAddress: string) {
     return Address.parse(userFriendlyAddress).toRawString();
 }
 
-export async function getBalance(contract: OpenedContract<WalletContractV4>) {
+export async function getBalance (contract: OpenedContract<WalletContractV4>) {
     return await contract.getBalance();
 }
 
-async function createTransfer(contract: OpenedContract<WalletContractV4>, keyPair: KeyPair, value: string, address: string, body: string) {
+export async function createTransfer (contract: OpenedContract<WalletContractV4>, keyPair: KeyPair, value: string, destination: string, body: string) {
     // Create a transfer
     let seqno: number = await contract.getSeqno();
     return contract.createTransfer({
@@ -32,10 +45,25 @@ async function createTransfer(contract: OpenedContract<WalletContractV4>, keyPai
         secretKey: keyPair.secretKey,
         messages: [internal({
             value: value,
-            to: address,
+            to: destination,
             body: body,
         })]
     });
+}
+
+export async function sendTransfer (contract: OpenedContract<WalletContractV4>, keyPair: KeyPair, seqno: number, value: string, destination: string, body: string) {
+    await contract.sendTransfer({
+        secretKey: keyPair.secretKey,
+        seqno: seqno,
+        messages: [
+            internal({
+                to: destination,
+                value: value,
+                body: body,
+                bounce: false
+            })
+        ]
+    })
 }
 
 // value: '1.5',
