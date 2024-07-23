@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7aa6e5e7-77ea-45c9-9de8-36bca5acefb4" name="Changes" comment="feat: make a transfer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/const.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jetton-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/jetton-utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +77,7 @@
       <workItem from="1721459454455" duration="12509000" />
       <workItem from="1721613387971" duration="27457000" />
       <workItem from="1721700513069" duration="10183000" />
-      <workItem from="1721720158490" duration="3706000" />
+      <workItem from="1721720158490" duration="5026000" />
     </task>
     <task id="LOCAL-00001" summary="feat: retrive balance jettons">
       <option name="closed" value="true" />
