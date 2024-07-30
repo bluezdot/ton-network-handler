@@ -75,3 +75,7 @@ export async function getWalletFromMnemonic (mnemonic: string) {
 
     return WalletContractV4.create({ publicKey: key.publicKey, workchain: 0});
 }
+
+export function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
