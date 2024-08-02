@@ -23,7 +23,7 @@ async function main () {
 
     // 5. wait transaction confirmed
     let currentSeqno = seqno;
-    while (currentSeqno == seqno) {
+    while (currentSeqno === seqno) {
         console.log("waiting for transaction to confirm...");
         await sleep(1500);
         currentSeqno = await contract.getSeqno();
@@ -36,23 +36,3 @@ async function main () {
 
 
 main().then(r => console.log(r));
-
-//
-// const state = await tonApi.api.getContractState(tonAddress);
-//
-// console.log('tonApi.api.getContractState()', state);
-//
-// if (!state || !state.lastTransaction) {
-//     return 0n;
-// }
-//
-// const { hash: lastHash, lt: lastLt } = state.lastTransaction;
-// const lastTx = await tonApi.api.getTransaction(tonAddress, lastLt, lastHash);
-// console.log('lastTx', lastTx);
-//
-// if (lastTx && lastTx.inMessage) {
-//     const msgCell = beginCell().store(storeMessage(lastTx.inMessage)).endCell();
-//     const inMsgHash = msgCell.hash().toString('base64');
-//
-//     console.log('InMsgHash', inMsgHash);
-// }

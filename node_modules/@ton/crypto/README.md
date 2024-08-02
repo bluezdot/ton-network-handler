@@ -37,9 +37,9 @@ require("buffer");
 ```
 
 ## React Native
-To make it work on react native `expo-random` native module is required:
+To make it work on react native `expo-crypto` native module is required:
 `
-expo install expo-random
+expo install expo-crypto
 `
 
 ## Secure random

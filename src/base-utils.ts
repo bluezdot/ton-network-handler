@@ -25,7 +25,7 @@ export async function getTonClient (isTestnet = false) {
     return new TonClient({ endpoint });
 }
 
-export async function getTonAddress (userFriendlyAddress: string) {
+export function getTonAddress (userFriendlyAddress: string) {
     return Address.parse(userFriendlyAddress);
 }
 
