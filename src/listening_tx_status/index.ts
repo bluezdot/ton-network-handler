@@ -1,5 +1,5 @@
 import {Cell, Address, beginCell, storeMessage, TonClient} from "@ton/ton";
-import {getTonClient} from "../base-utils";
+import {getTonClient} from "../utils/base-utils";
 import TonConnect from "@tonconnect/sdk";
 import {TonConnectStorage} from "../storage/storage";
 // import {TonConnectUI} from "@tonconnect/ui-react";

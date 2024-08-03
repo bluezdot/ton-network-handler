@@ -1,4 +1,4 @@
-import {getTonClient, sleep} from "../base-utils";
+import {getTonClient, sleep} from "../utils/base-utils";
 import {Address, beginCell, Cell, storeMessage, TonClient} from "@ton/ton";
 import {useTonConnectUI} from "@tonconnect/ui-react";
 

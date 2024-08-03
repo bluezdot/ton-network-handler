@@ -1,5 +1,5 @@
-import {getTonAddress, getTonClient} from "../base-utils";
-import {ADDRESS_TEST_1, ADDRESS_TEST_2, MNEMONIC} from "../const";
+import {getTonAddress, getTonClient} from "../utils/base-utils";
+import {ADDRESS_TEST_1, ADDRESS_TEST_2, MNEMONIC} from "../utils/const";
 import {beginCell, fromNano} from "@ton/ton";
 
 // 2.1. Create transaction

@@ -1,5 +1,5 @@
-import {genKey, getTonClient, sendTransfer, sleep, stringToStringArray} from "../base-utils";
-import {MNEMONIC, WORKCHAIN} from "../const";
+import {genKey, getTonClient, sendTransfer, sleep, stringToStringArray} from "../utils/base-utils";
+import {MNEMONIC, WORKCHAIN} from "../utils/const";
 import {WalletContractV4, internal, TonClient, Address} from "@ton/ton";
 import {mnemonicToPrivateKey} from "@ton/crypto";
 

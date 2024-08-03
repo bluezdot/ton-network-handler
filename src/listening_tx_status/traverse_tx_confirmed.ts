@@ -1,5 +1,5 @@
-import {sleep} from "../base-utils";
-import {MNEMONIC, WORKCHAIN} from "../const";
+import {sleep} from "../utils/base-utils";
+import {MNEMONIC, WORKCHAIN} from "../utils/const";
 import {WalletContractV4, internal, TonClient, Address, Cell, beginCell, storeMessage, external} from "@ton/ton";
 import {mnemonicToPrivateKey} from "@ton/crypto";
 

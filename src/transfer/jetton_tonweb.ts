@@ -2,8 +2,8 @@
 
 import TonWeb from 'tonweb';
 import {mnemonicToSeed} from 'tonweb-mnemonic';
-import {ADDRESS_TEST_2, MNEMONIC} from "../const";
-import {stringToStringArray} from "../base-utils";
+import {ADDRESS_TEST_2, MNEMONIC} from "../utils/const";
+import {stringToStringArray} from "../utils/base-utils";
 const {JettonWallet} = TonWeb.token.jetton;
 
 

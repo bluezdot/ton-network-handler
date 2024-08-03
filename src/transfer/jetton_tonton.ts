@@ -1,5 +1,5 @@
-import {getTonClient} from "../base-utils";
-import {ADDRESS_TEST_1, ADDRESS_TEST_2, MNEMONIC, WORKCHAIN} from "../const";
+import {getTonClient} from "../utils/base-utils";
+import {ADDRESS_TEST_1, ADDRESS_TEST_2, MNEMONIC, WORKCHAIN} from "../utils/const";
 import {WalletContractV4, Address, JettonMaster, beginCell, toNano, internal} from "@ton/ton";
 import {mnemonicToPrivateKey} from "@ton/crypto";
 

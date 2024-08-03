@@ -4,9 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aa6e5e7-77ea-45c9-9de8-36bca5acefb4" name="Changes" comment="feat: add script track tx status result">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7aa6e5e7-77ea-45c9-9de8-36bca5acefb4" name="Changes" comment="chore: update gitignore">
+      <change beforePath="$PROJECT_DIR$/src/base-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/base-utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jetton-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/jetton-utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listening_tx_status/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/listening_tx_status/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_confirmed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_confirmed.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_jetton.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_jetton.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/abc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/abc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_address.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_contract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_contract.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_listening_transaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_listening_transaction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_transactions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_transactions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_wallet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_wallet.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfer/jetton_tonton.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/jetton_tonton.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfer/jetton_tonweb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/jetton_tonweb.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +76,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="es6.move.members.recent.items">
@@ -104,7 +120,7 @@
       <workItem from="1722591214540" duration="1811000" />
       <workItem from="1722593040086" duration="220000" />
       <workItem from="1722593294820" duration="6465000" />
-      <workItem from="1722650278947" duration="1797000" />
+      <workItem from="1722650278947" duration="2073000" />
     </task>
     <task id="LOCAL-00001" summary="feat: retrive balance jettons">
       <option name="closed" value="true" />
@@ -234,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722423334210</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="chore: update gitignore">
+      <option name="closed" value="true" />
+      <created>1722652491189</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1722652491189</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +290,7 @@
     <MESSAGE value="test: update test transaction" />
     <MESSAGE value="build: update dependencies" />
     <MESSAGE value="feat: add script track tx status result" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add script track tx status result" />
+    <MESSAGE value="chore: update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update gitignore" />
   </component>
 </project>

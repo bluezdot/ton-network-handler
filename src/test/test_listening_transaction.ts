@@ -1,5 +1,5 @@
-import {genKey, getTonClient, sendTransfer, sleep, stringToStringArray} from "../base-utils";
-import {MNEMONIC, WORKCHAIN} from "../const";
+import {genKey, getTonClient, sendTransfer, sleep, stringToStringArray} from "../utils/base-utils";
+import {MNEMONIC, WORKCHAIN} from "../utils/const";
 import {WalletContractV4, fromNano} from "@ton/ton";
 
 // 2.1. Create transaction

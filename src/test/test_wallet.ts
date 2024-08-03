@@ -1,5 +1,5 @@
-import {getTonAddress, getTonClient, getWalletFromMnemonic} from "../base-utils";
-import {MNEMONIC} from "../const";
+import {getTonAddress, getTonClient, getWalletFromMnemonic} from "../utils/base-utils";
+import {MNEMONIC} from "../utils/const";
 
 // 2.1. Create transaction
 async function main () {

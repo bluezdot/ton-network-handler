@@ -1,9 +1,10 @@
 import {Address, JettonMaster, JettonWallet, TonClient, WalletContractV4} from "@ton/ton";
-import {genKey, getBalance, getTonAddress, getTonClient, getWalletFromMnemonic} from "./base-utils";
+import {genKey, getBalance, getTonAddress, getTonClient} from "./utils/base-utils";
 import TonWeb from "tonweb";
-import {WORKCHAIN} from "./const";
+import {WORKCHAIN} from "./utils/const";
 
-const CLIENT = new TonClient({
+let CLIENT: TonClient;
+CLIENT = new TonClient({
     endpoint: 'https://toncenter.com/api/v2/jsonRPC'
 });
 
@@ -44,4 +45,4 @@ async function main() {
 }
 
 main().then(r => (console.log(r.toString())) );
-export {MNEMONIC} from "./const";
+export {MNEMONIC} from "./utils/const";
