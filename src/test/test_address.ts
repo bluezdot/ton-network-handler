@@ -1,35 +1,18 @@
-import {getTonAddress, getTonClient, getWalletFromMnemonic} from "../utils/base-utils";
-import {ADDRESS_TEST_1, ADDRESS_TEST_2} from "../utils/const";
-import {beginCell, fromNano, storeMessage, TonClient} from "@ton/ton";
+import {ADDRESS_TEST_1, PHONG_RPC, TONCENTER_RPC} from "../utils/const";
+import {Address, fromNano, TonClient} from "@ton/ton";
+
+
 
 // 2.1. Create transaction
 async function main () {
-    // const client = await getTonClient();
-    const client = new TonClient({ endpoint: 'https://toncenter.com/api/v2/jsonRPC'})
+    const client = new TonClient({ endpoint: PHONG_RPC})
 
-    const address = await getTonAddress(ADDRESS_TEST_1);
-    const balance = await client.getBalance(address);
-    console.log('balance 1:', fromNano(balance));
-    console.log('balance 2:', await client.getBalance(await getTonAddress(ADDRESS_TEST_2)));
-    console.log(address.toRawString(), address.toString(), address.workChain, address.toRaw(), address.toStringBuffer());
+    const balance1 = await client.getBalance(Address.parse(ADDRESS_TEST_1));
+    const balance2 = await client.getBalance(Address.parse('EQBTZd5pX8a3oSoeh_AECNF-JL6j9Cn74Brte7qNMKdvwE2u'))
+    console.log('balance 1:', fromNano(balance1));
+    console.log('balance 2:', fromNano(balance2));
 
-    const state = await client.getContractState(address);
-    console.log('[i] State', state);
-    if (!state || !state.lastTransaction) {
-        console.log('[i] No state')
-    } else {
-        const { hash: lastHash, lt: lastLt } = state.lastTransaction;
-        const lastTx = await client.getTransaction(address, lastLt, lastHash);
-        console.log('[i] lastTx', lastTx);
-        if (lastTx && lastTx.inMessage) {
-            const msgCell = beginCell().store(storeMessage(lastTx.inMessage)).endCell();
-            const inMsgHash = msgCell.hash().toString('base64');
-            console.log('[i] InMsgHash', inMsgHash);
-        }
-    }
-
-    return 0;
+    return;
 }
 
-
-main().then(r => console.log(r));
+main();

@@ -1,17 +1,17 @@
-import {getTonAddress, getTonClient, getWalletFromMnemonic} from "../utils/base-utils";
-import {ADDRESS_TEST_1, MNEMONIC} from "../utils/const";
+import {PHONG_RPC, TONCENTER_RPC} from "../utils/const";
+import {TonClient} from "@ton/ton";
 
 // 2.1. Create transaction
 async function main () {
-    const client = await getTonClient();
+    const client = new TonClient({ endpoint: TONCENTER_RPC})
 
     // sendMessage
     // sendExternalMessage
 
     console.log("Client:", await client.getMasterchainInfo());
 
-    return 0;
+    return;
 }
 
 
-main().then(r => console.log(r));
+main();
