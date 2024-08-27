@@ -1,8 +1,6 @@
 import {ADDRESS_TEST_1, PHONG_RPC, TONCENTER_RPC} from "../utils/const";
 import {Address, fromNano, TonClient} from "@ton/ton";
 
-
-
 // 2.1. Create transaction
 async function main () {
     const client = new TonClient({ endpoint: PHONG_RPC})
