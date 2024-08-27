@@ -1,6 +1,9 @@
 import {getHttpEndpoint} from "@orbs-network/ton-access";
 import {Address, internal, OpenedContract, TonClient, WalletContractV4} from "@ton/ton";
 import {KeyPair, mnemonicNew, mnemonicToPrivateKey, mnemonicToWalletKey} from "@ton/crypto";
+import {API_KEY} from "./const";
+import {TxByMsgResponse} from "../listening_tx_status/new_listening";
+import TonWeb from "tonweb";
 
 export async function genKey(mnemonic?: string) {
     if (mnemonic) {
@@ -39,7 +42,7 @@ export async function getBalance (contract: OpenedContract<WalletContractV4>) {
 
 export async function createTransfer (contract: OpenedContract<WalletContractV4>, keyPair: KeyPair, value: string, destination: string, body: string) {
     // Create a transfer
-    let seqno: number = await contract.getSeqno();
+    const seqno: number = await contract.getSeqno();
     return contract.createTransfer({
         seqno,
         secretKey: keyPair.secretKey,
@@ -78,4 +81,85 @@ export async function getWalletFromMnemonic (mnemonic: string) {
 
 export function sleep(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export async function sendTonTransaction (boc: string) {
+    const resp = await fetch(
+        'https://testnet.toncenter.com/api/v2/sendBocReturnHash', { // todo: create function to get this api by chain
+            method: 'POST',
+            headers: {
+                accept: 'application/json',
+                'Content-Type': 'application/json',
+                'X-API-KEY': API_KEY // todo: hide this key
+            },
+            body: JSON.stringify({
+                boc: boc
+            })
+        }
+    );
+
+    const extMsgInfo = await resp.json() as {result: { hash: string}};
+
+    return extMsgInfo.result.hash;
+}
+
+export async function getTxByInMsg (extMsgHash: string) {
+    const url = `https://testnet.toncenter.com/api/v3/transactionsByMessage?msg_hash=${extMsgHash}&direction=in`;
+    const resp = await fetch(
+        url, {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                'Content-Type': 'application/json',
+                'X-API-KEY': API_KEY
+            }
+        }
+    )
+
+    return await resp.json() as TxByMsgResponse;
+}
+
+async function retry<T>(fn: () => Promise<T>, options: { retries: number, delay: number }): Promise<T> {
+    let lastError: Error | undefined;
+    for (let i = 0; i < options.retries; i++) {
+        try {
+            return await fn();
+        } catch (e) {
+            if (e instanceof Error) {
+                lastError = e;
+            }
+            await new Promise(resolve => setTimeout(resolve, options.delay));
+        }
+    }
+    throw lastError;
+}
+
+export async function getStatusByExtMsgHash(extMsgHash: string): Promise<boolean> {
+    return retry(async () => {
+        const externalTxInfo = await getTxByInMsg(extMsgHash);
+        const internalMsgHash = externalTxInfo.transactions[0].out_msgs[0].hash as string;
+
+        if (internalMsgHash) {
+            const internalTxInfoRaw = await getTxByInMsg(extMsgHash);
+            const internalTxInfo = internalTxInfoRaw.transactions[0];
+            const isCompute = internalTxInfo.description.compute_ph.success;
+            const isAction = internalTxInfo.description.action.success;
+            const isBounced = internalTxInfo.out_msgs[0] && internalTxInfo.out_msgs[0].bounced;
+
+            if (isCompute && isAction && !isBounced) {
+                return true;
+            }
+        }
+
+        throw new Error('Transaction not found');
+    }, {retries: 10, delay: 3000});
+}
+
+export function isBounceable (address: string) {
+    const addr = new TonWeb.Address(address);
+    return !addr.isUserFriendly || addr.isBounceable;
+}
+
+export function isActiveAccount(status: Account['status']) {
+    return !['empty', 'uninit', 'nonexist'].includes(status);
 }
