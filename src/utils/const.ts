@@ -8,6 +8,7 @@ export const JETTON_MASTER_ADDRESS = 'kQAiboDEv_qRrcEdrYdwbVLNOXBHwShFbtKGbQVJ2O
 
 export const PHONG_RPC = 'https://go.getblock.io/e6f82f97ee0f4343bb92bcf901f7f7d7/jsonRPC';
 export const TONCENTER_RPC = 'https://toncenter.com/api/v2/jsonRPC';
+export const TONCENTER_TESTNET_RPC = 'https://testnet.toncenter.com/api/v2/jsonRPC';
 
 export const API_KEY = '870ff97c30ad16dc4297bcac8bcf2243a4daffeba6c6d6c31553e342811e673a';
 export const API = {
