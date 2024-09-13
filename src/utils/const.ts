@@ -4,9 +4,11 @@ export const MNEMONIC2 = 'joke rack suggest twin chef ketchup ready holiday comm
 export const MNEMONIC3 = 'evidence sun point creek someone luggage strategy bachelor crawl bind logic swing glance aunt retreat creek south machine olympic warfare arctic warfare source filter'
 export const ADDRESS_TEST_1 = 'UQBbamQ89OMv8DkcR2RW_tW9sX7xClXLt8KYDHbUqtB4dbz1';
 export const ADDRESS_TEST_2 = 'UQCDV2euuWnDhFhy1GM_u6_fIPkvfO0frg95gErAnzMqGV03';
-export const JETTON_MASTER_ADDRESS = 'kQAiboDEv_qRrcEdrYdwbVLNOXBHwShFbtKGbQVJ2OKxY_Di';
+export const AIOX_JETTON_MASTER_ADDRESS = 'kQAiboDEv_qRrcEdrYdwbVLNOXBHwShFbtKGbQVJ2OKxY_Di';
 
-export const PHONG_RPC = 'https://go.getblock.io/e6f82f97ee0f4343bb92bcf901f7f7d7/jsonRPC';
+export const PHONG_RPC = 'https://ton-rpc.subwallet.app/jsonRPC';
+export const PHONG_TESTNET_RPC = 'https://ton-rpc-testnet.subwallet.app/jsonRPC';
+
 export const TONCENTER_RPC = 'https://toncenter.com/api/v2/jsonRPC';
 export const TONCENTER_TESTNET_RPC = 'https://testnet.toncenter.com/api/v2/jsonRPC';
 
