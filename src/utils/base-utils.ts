@@ -1,6 +1,7 @@
 import {getHttpEndpoint} from "@orbs-network/ton-access";
-import {Address, internal, OpenedContract, TonClient, WalletContractV4} from "@ton/ton";
+import {Address, internal, OpenedContract, TonClient, WalletContractV4, external} from "@ton/ton";
 import {KeyPair, mnemonicNew, mnemonicToPrivateKey, mnemonicToWalletKey} from "@ton/crypto";
+import {beginCell, Cell, storeMessage } from '@ton/core';
 import {API_KEY} from "./const";
 import {TxByMsgResponse} from "../listening_tx_status/new_listening";
 import TonWeb from "tonweb";
@@ -160,6 +161,16 @@ export function isBounceable (address: string) {
     return !addr.isUserFriendly || addr.isBounceable;
 }
 
-export function isActiveAccount(status: Account['status']) {
-    return !['empty', 'uninit', 'nonexist'].includes(status);
+export function externalMessage (contract: WalletContractV4, seqno: number, body: Cell) {
+    return beginCell()
+        .storeWritable(
+            storeMessage(
+                external({
+                    to: contract.address,
+                    init: seqno === 0 ? contract.init : undefined,
+                    body: body
+                })
+            )
+        )
+        .endCell();
 }
