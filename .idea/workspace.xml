@@ -4,24 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aa6e5e7-77ea-45c9-9de8-36bca5acefb4" name="Changes" comment="chore: update gitignore">
-      <change beforePath="$PROJECT_DIR$/src/base-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/base-utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/const.ts" afterDir="false" />
+    <list default="true" id="7aa6e5e7-77ea-45c9-9de8-36bca5acefb4" name="Changes" comment="test: test jetton balance">
+      <change afterPath="$PROJECT_DIR$/src/listening_tx_status/listen_ton_tx_status.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletContractV5Beta.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletContractV5Beta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletContractV5Beta.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletContractV5Beta.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletV5BetaWalletId.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletV5BetaWalletId.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletV5BetaWalletId.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletV5BetaWalletId.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletV5BetaWalletId.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5beta/WalletV5BetaWalletId.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletContractV5R1.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletContractV5R1.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletContractV5R1.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletContractV5R1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletV5R1WalletId.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletV5R1WalletId.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletV5R1WalletId.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletV5R1WalletId.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletV5R1WalletId.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/dist/wallets/v5r1/WalletV5R1WalletId.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ton/ton/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ton/ton/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jetton-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/jetton-utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listening_tx_status/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/listening_tx_status/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_confirmed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_confirmed.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_jetton.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_jetton.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/abc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/abc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_confirmed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/listening_tx_status/listen_jetton_tx_status.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listening_tx_status/traverse_tx_jetton.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/test_address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_address.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_contract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_contract.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_listening_transaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_listening_transaction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_transactions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_transactions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_wallet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_wallet.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_jetton_balance.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_jetton_balance.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfer/jetton_tonton.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/jetton_tonton.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfer/jetton_tonweb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/jetton_tonweb.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfer/jetton_tonton_sendBoc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/jetton_tonton_sendBoc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/base-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/base-utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +85,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/fee" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -120,7 +130,43 @@
       <workItem from="1722591214540" duration="1811000" />
       <workItem from="1722593040086" duration="220000" />
       <workItem from="1722593294820" duration="6465000" />
-      <workItem from="1722650278947" duration="2073000" />
+      <workItem from="1722650278947" duration="30121000" />
+      <workItem from="1722823154898" duration="23828000" />
+      <workItem from="1722909721022" duration="10797000" />
+      <workItem from="1722995790082" duration="13603000" />
+      <workItem from="1723029421570" duration="2396000" />
+      <workItem from="1723083318461" duration="9786000" />
+      <workItem from="1723180710663" duration="10328000" />
+      <workItem from="1723427947338" duration="20293000" />
+      <workItem from="1723514790854" duration="3976000" />
+      <workItem from="1723601053750" duration="598000" />
+      <workItem from="1723609275490" duration="599000" />
+      <workItem from="1723805430553" duration="2662000" />
+      <workItem from="1723858945703" duration="4116000" />
+      <workItem from="1723896900808" duration="295000" />
+      <workItem from="1724032054233" duration="7774000" />
+      <workItem from="1724117850145" duration="12910000" />
+      <workItem from="1724154786219" duration="599000" />
+      <workItem from="1724204766366" duration="599000" />
+      <workItem from="1724291622789" duration="599000" />
+      <workItem from="1724377667532" duration="474000" />
+      <workItem from="1724748637427" duration="2953000" />
+      <workItem from="1724754729397" duration="1387000" />
+      <workItem from="1724809327177" duration="736000" />
+      <workItem from="1724907723766" duration="6104000" />
+      <workItem from="1724983370668" duration="599000" />
+      <workItem from="1725414767393" duration="598000" />
+      <workItem from="1725436779131" duration="2326000" />
+      <workItem from="1725501893834" duration="4000" />
+      <workItem from="1725941636610" duration="1259000" />
+      <workItem from="1725945178590" duration="598000" />
+      <workItem from="1726019809596" duration="599000" />
+      <workItem from="1726038565566" duration="599000" />
+      <workItem from="1726106850666" duration="598000" />
+      <workItem from="1726112280818" duration="590000" />
+      <workItem from="1726204122768" duration="16143000" />
+      <workItem from="1726278678789" duration="17781000" />
+      <workItem from="1726452692677" duration="10885000" />
     </task>
     <task id="LOCAL-00001" summary="feat: retrive balance jettons">
       <option name="closed" value="true" />
@@ -258,7 +304,95 @@
       <option name="project" value="LOCAL" />
       <updated>1722652491189</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="refactor: move utils and const">
+      <option name="closed" value="true" />
+      <created>1722652696011</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722652696011</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: sendBocReturnHash">
+      <option name="closed" value="true" />
+      <created>1722686694537</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1722686694537</updated>
+    </task>
+    <task id="LOCAL-00020" summary="test: test Phong rpc">
+      <option name="closed" value="true" />
+      <created>1724749804747</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724749804747</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test: test Phong rpc">
+      <option name="closed" value="true" />
+      <created>1724752375505</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724752375505</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: add utils function">
+      <option name="closed" value="true" />
+      <created>1724752424107</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724752424107</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: delete some files">
+      <option name="closed" value="true" />
+      <created>1724752477185</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724752477185</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test: test Phong rpc">
+      <option name="closed" value="true" />
+      <created>1724755307265</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724755307265</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test: test address">
+      <option name="closed" value="true" />
+      <created>1725941701180</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1725941701180</updated>
+    </task>
+    <task id="LOCAL-00026" summary="test: test jetton balance">
+      <option name="closed" value="true" />
+      <created>1726204743477</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1726204743477</updated>
+    </task>
+    <task id="LOCAL-00027" summary="test: test jetton balance">
+      <option name="closed" value="true" />
+      <created>1726205216009</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1726205216009</updated>
+    </task>
+    <task id="LOCAL-00028" summary="test: test jetton balance">
+      <option name="closed" value="true" />
+      <created>1726205435820</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1726205435820</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +425,13 @@
     <MESSAGE value="build: update dependencies" />
     <MESSAGE value="feat: add script track tx status result" />
     <MESSAGE value="chore: update gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update gitignore" />
+    <MESSAGE value="refactor: move utils and const" />
+    <MESSAGE value="feat: sendBocReturnHash" />
+    <MESSAGE value="feat: add utils function" />
+    <MESSAGE value="feat: delete some files" />
+    <MESSAGE value="test: test Phong rpc" />
+    <MESSAGE value="test: test address" />
+    <MESSAGE value="test: test jetton balance" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: test jetton balance" />
   </component>
 </project>
