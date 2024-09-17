@@ -1,17 +1,12 @@
 import {Address, JettonMaster, JettonWallet, TonClient, WalletContractV4} from "@ton/ton";
-import {genKey, getBalance, getTonAddress, getTonClient} from "./utils/base-utils";
+import {genKey, getBalance, getTonAddress} from "./utils/base-utils";
 import TonWeb from "tonweb";
-import {WORKCHAIN} from "./utils/const";
-
-let CLIENT: TonClient;
-CLIENT = new TonClient({
-    endpoint: 'https://toncenter.com/api/v2/jsonRPC'
-});
+import {AIOX_JETTON_MASTER_ADDRESS, TONCENTER_TESTNET_RPC, WORKCHAIN} from "./utils/const";
 
 async function main() {
     // 1.1. Create Address object and get native balance.
     // Recheck here: https://tonscan.org/address/EQBTZd5pX8a3oSoeh_AECNF-JL6j9Cn74Brte7qNMKdvwE2u
-    const tonClient = await getTonClient();
+    const tonClient = new TonClient({ endpoint: TONCENTER_TESTNET_RPC})
     const address11 = await getTonAddress('EQBTZd5pX8a3oSoeh_AECNF-JL6j9Cn74Brte7qNMKdvwE2u')
     const balance11 = await tonClient.getBalance(address11);
     console.log('[1.1] balance:', balance11)
@@ -24,7 +19,7 @@ async function main() {
     console.log('[1.2] balance:', balance12);
 
     // 1.3. Get Jettons balance (TonWeb)
-    const usdtMasterAddress = Address.parse('EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs');
+    const usdtMasterAddress = Address.parse(AIOX_JETTON_MASTER_ADDRESS);
     const usdtMasterContract = tonClient.open(JettonMaster.create(usdtMasterAddress));
     const address13 = await getTonAddress('EQAYqo4u7VF0fa4DPAebk4g9lBytj2VFny7pzXR0trjtXQaO');
     const jettonAddress = await usdtMasterContract.getWalletAddress(address13);
@@ -41,8 +36,7 @@ async function main() {
     const balance14 = await jettonWalletContract.getBalance();
     console.log('[1.4] balance:', balance14);
 
-    return 'end';
+    return;
 }
 
-main().then(r => (console.log(r.toString())) );
-export {MNEMONIC} from "./utils/const";
+main();
