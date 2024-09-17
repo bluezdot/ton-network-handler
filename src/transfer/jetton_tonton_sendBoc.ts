@@ -1,5 +1,17 @@
 import {ADDRESS_TEST_1, ADDRESS_TEST_2, API_KEY, MNEMONIC, WORKCHAIN} from "../utils/const";
-import {WalletContractV4, Address, JettonMaster, beginCell, toNano, internal, storeMessageRelaxed, TonClient, Cell, storeMessage, external} from "@ton/ton";
+import {
+    WalletContractV4,
+    Address,
+    JettonMaster,
+    beginCell,
+    toNano,
+    internal,
+    storeMessageRelaxed,
+    TonClient,
+    Cell,
+    storeMessage,
+    external,
+} from "@ton/ton";
 import {mnemonicToPrivateKey} from "@ton/crypto";
 
 async function main () {
@@ -19,7 +31,7 @@ async function main () {
     const aiotxMasterContract = client.open(JettonMaster.create(aiotxMasterAddress));
     const jettonWalletAddress = await aiotxMasterContract.getWalletAddress(walletContract.address);
 
-    // todo: need construct message manually
+    // todo: construct message manually
     const destinationAddress = Address.parse(ADDRESS_TEST_2);
     const responseAddress = Address.parse(ADDRESS_TEST_1);
     const forwardPayload = beginCell()
@@ -46,11 +58,7 @@ async function main () {
         body: messageBody
     });
 
-    const internalMessageCell = beginCell()
-        .store(storeMessageRelaxed(internalMessage))
-        .endCell();
-
-    // todo: try to send this internal message
+    // todo: send this internal message
     const seqno: number = await contract.getSeqno();
     const tx = walletContract.createTransfer({
         secretKey: keyPair.secretKey,
@@ -62,8 +70,6 @@ async function main () {
 
     const api = 'https://testnet.toncenter.com/api/v2/sendBocReturnHash'
     const boc = externalMessage(walletContract, seqno, tx).toBoc().toString('base64');
-    // const boc = internalMessageCell.toBoc().toString('base64');
-    // const boc = tx.toBoc().toString('base64');
     console.log('boc', boc);
 
     const resp = await fetch(
