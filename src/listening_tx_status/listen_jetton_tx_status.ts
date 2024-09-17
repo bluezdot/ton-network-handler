@@ -1,24 +1,24 @@
 import {sleep} from "../utils/base-utils";
-import {MNEMONIC, WORKCHAIN} from "../utils/const";
+import {API_KEY, MNEMONIC, WORKCHAIN} from "../utils/const";
 import {WalletContractV4, internal, TonClient, Address, Cell, beginCell, storeMessage, external} from "@ton/ton";
 import {mnemonicToPrivateKey} from "@ton/crypto";
-import TonWeb from "tonweb";
 
 async function main () {
-    // 1. Connect to testnet RPC
-    const client = new TonClient({ endpoint: 'https://testnet.toncenter.com/api/v2/jsonRPC'})
-    const jettonAddress = 'EQDUdp0EQVVX0rRpnijjhUI4wx0ckRXhV7XsUrEhbAeLQIEc' // Aiotx
-    const tonweb = new TonWeb(new TonWeb.HttpProvider('https://testnet.toncenter.com/api/v2/jsonRPC'));
-    const provider = tonweb.provider;
+    const client = new TonClient({
+        endpoint: 'https://testnet.toncenter.com/api/v2/jsonRPC',
+        apiKey: API_KEY
+    });
 
-    // 2. Retrieve wallet contract object
-    const keyPair = await mnemonicToPrivateKey(MNEMONIC.split(' '));
-    await sleep(1500)
+    const keyPair = await mnemonicToPrivateKey(MNEMONIC.split(' ').map(word => word.trim()));
     const walletContract = WalletContractV4.create({workchain: WORKCHAIN, publicKey: keyPair.publicKey});
+
+    // 3. Make sure wallet is deployed
+    if (!await client.isContractDeployed(walletContract.address)) {
+        return 'wallet is not deployed';
+    }
 
     // 4. Create transaction 0.05 TON to EQA4V9tF4lY2S_J-sEQR7aUj9IwW-Ou2vJQlCn--2DLOLR5e
     const contract = client.open(walletContract);
-    await sleep(1500)
     const seqno: number = await contract.getSeqno();
     const transaction = walletContract.createTransfer({
         secretKey: keyPair.secretKey,
@@ -32,9 +32,8 @@ async function main () {
             })
         ]
     })
-    await sleep(1500)
+
     await contract.send(transaction);
-    await sleep(1500)
     const boc = externalMessage(walletContract, seqno, transaction).toBoc().toString('base64');
     const tx = await getTxByBOC(client, walletContract.address, boc);
     console.log('[main] tx', tx)
@@ -110,15 +109,15 @@ async function retry<T>(fn: () => Promise<T>, options: { retries: number, delay:
 }
 
 function externalMessage (contract: WalletContractV4, seqno: number, body: Cell) {
-    return beginCell()
-        .storeWritable(
+       return beginCell()
+          .storeWritable(
             storeMessage(
-                external({
-                    to: contract.address,
-                    init: seqno === 0 ? contract.init : undefined,
-                    body: body,
-                }),
+              external({
+                to: contract.address,
+                init: seqno === 0 ? contract.init : undefined,
+                body: body,
+              }),
             ),
-        )
-        .endCell();
+          )
+          .endCell();
 }
